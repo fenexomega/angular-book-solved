@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h1>All contacts</h1>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Email Address
+      </th>
+      <th>
+        Phone Number
+      </th>
+      <th>
+        Actions
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="contact in contacts | filter:$parent.search">
+      <td>{{contact.name}}</td>
+      <td>{{contact.email}}</td>
+      <td>{{contact.phone}}</td>
+      <td><a href="/contact/{{ $index }}">View</a></td>
+    </tr>
+  </tbody>
+</table>

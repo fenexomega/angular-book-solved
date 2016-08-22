@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="myApp"  ng-controller="AppCtrl" >
+  <head>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/boostrap-theme.css" media="screen" title="no title" charset="utf-8">
+    <meta charset="utf-8">
+    <script type="text/javascript" src="assets/js/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="assets/js/angular.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="assets/js/controller.js" charset="utf-8"></script>
+    <title>Contacts Manager</title>
+  </head>
+  <body>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse"
+      data-target="#nav-toggle" name="button">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Contacts Manager</a>
+    </div>
+
+      <div class="collapse navbar-collapse" id="nav-toggle" >
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Browse</a></li>
+          <li><a href="/add">Add Contacts</a></li>
+        </ul>
+        <form class="navbar-form navbar-right" role="search">
+          <input type="text" name="name" value="" placeholder="Search" class="form-control">
+        </form>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <ul>
+          <li ng-repeat="contact in contacts">
+             {{contact.name}}
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>
